@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>hellotong</title>
-  
+  <icon>https://www.gravatar.com/avatar/48dc4539567cef376fc850a6961ee097</icon>
   <subtitle>Hello tong, hello world!</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -11,7 +11,7 @@
   
   <author>
     <name>Tong</name>
-    
+    <email>1336572985@qq.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
