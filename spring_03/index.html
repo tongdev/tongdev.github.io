@@ -181,12 +181,12 @@
 <meta property="og:site_name" content="hellotong">
 <meta property="og:description" content="Spring 基础篇（三），让我们一起开启 Spring 学习之旅吧。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://pifu006nk.bkt.clouddn.com/blog/20181204/7JufBmNWOsHs.jpg?imageslim">
-<meta property="og:updated_time" content="2018-12-07T14:06:24.996Z">
+<meta property="og:image" content="https://api.superbed.cn/pic/5c19c4d2c4ff9e2b4d698e6a">
+<meta property="og:updated_time" content="2018-12-19T04:12:48.076Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring（三）">
 <meta name="twitter:description" content="Spring 基础篇（三），让我们一起开启 Spring 学习之旅吧。">
-<meta name="twitter:image" content="http://pifu006nk.bkt.clouddn.com/blog/20181204/7JufBmNWOsHs.jpg?imageslim">
+<meta name="twitter:image" content="https://api.superbed.cn/pic/5c19c4d2c4ff9e2b4d698e6a">
 
 
 
@@ -529,8 +529,8 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="http://pifu006nk.bkt.clouddn.com/blog/20181204/7JufBmNWOsHs.jpg?imageslim" rel="gallery_cjpunfk3e000lzotkihwe9sb3" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://pifu006nk.bkt.clouddn.com/blog/20181204/7JufBmNWOsHs.jpg?imageslim" itemprop="contentUrl">
+              <a class="post-gallery-img fancybox" href="https://api.superbed.cn/pic/5c19c4d2c4ff9e2b4d698e6a" rel="gallery_cjpunw0an000ak8tki58me7vi" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://api.superbed.cn/pic/5c19c4d2c4ff9e2b4d698e6a" itemprop="contentUrl">
               </a>
             
           
@@ -585,9 +585,9 @@
 <h3 id="Spring-管理事务的方式"><a href="#Spring-管理事务的方式" class="headerlink" title="Spring 管理事务的方式"></a>Spring 管理事务的方式</h3><blockquote>
 <p>通过一个转账的案例来演示配置</p>
 </blockquote>
-<h4 id="XML-配置"><a href="#XML-配置" class="headerlink" title="XML 配置"></a>XML 配置</h4><h5 id="导入-jar-包-1"><a href="#导入-jar-包-1" class="headerlink" title="导入 jar 包"></a>导入 jar 包</h5><p><img src="http://pifu006nk.bkt.clouddn.com/blog/20181207/oM9sqh4lE1VG.jpg?imageslim" alt="mark"></p>
+<h4 id="XML-配置"><a href="#XML-配置" class="headerlink" title="XML 配置"></a>XML 配置</h4><h5 id="导入-jar-包-1"><a href="#导入-jar-包-1" class="headerlink" title="导入 jar 包"></a>导入 jar 包</h5><p><img src="https://api.superbed.cn/pic/5c19c51ec4ff9e2b4e0451de" alt="mark"></p>
 <h5 id="导入新的命名空间（-约束）"><a href="#导入新的命名空间（-约束）" class="headerlink" title="导入新的命名空间（/约束）"></a>导入新的命名空间（/约束）</h5><p>导入 aop 约束和 tx 事务约束</p>
-<p><img src="http://pifu006nk.bkt.clouddn.com/blog/20181207/AVvsR8tW1klN.jpg?imageslim" alt="mark"></p>
+<p><img src="https://api.superbed.cn/pic/5c19c51ec4ff9e2b4e0451df" alt="mark"></p>
 <h5 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h5><p>AccountDaoImpl</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AccountDaoImpl</span> <span class="keyword">extends</span> <span class="title">JdbcDaoSupport</span> <span class="keyword">implements</span> <span class="title">AccountDao</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="comment">// 加钱方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">increaseMoney</span><span class="params">(Integer id, Double money)</span> </span>&#123;</span><br><span class="line">		getJdbcTemplate().update(<span class="string">"update account set money = money+? where id = ? "</span>, money, id);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="comment">// 减钱方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">decreaseMoney</span><span class="params">(Integer id, Double money)</span> </span>&#123;</span><br><span class="line">		getJdbcTemplate().update(<span class="string">"update account set money = money-? where id = ? "</span>, money, id);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>AccountServiceImpl</p>
@@ -630,7 +630,7 @@
   <p><span>本文标题:</span><a href="/spring_03/">Spring（三）</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Tong 的个人博客">Tong</a></p>
   <p><span>发布时间:</span>2018年12月07日 - 22:01</p>
-  <p><span>最后更新:</span>2018年12月07日 - 22:06</p>
+  <p><span>最后更新:</span>2018年12月19日 - 12:12</p>
   <p><span>原始链接:</span><a href="/spring_03/" title="Spring（三）">hellotong.ml/spring_03/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="hellotong.ml/spring_03/" aria-label="复制成功！"></i></span>
   </p>
