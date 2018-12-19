@@ -181,12 +181,12 @@
 <meta property="og:site_name" content="hellotong">
 <meta property="og:description" content="Hibernate 基础篇（二），我们一起学习 Hibernate。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://pifu006nk.bkt.clouddn.com/blog/20181122/WfN4BDIOLV6a.jpg?imageslim">
-<meta property="og:updated_time" content="2018-11-22T11:42:42.026Z">
+<meta property="og:image" content="https://api.superbed.cn/pic/5c19c1a8c4ff9e2b4d698e5c">
+<meta property="og:updated_time" content="2018-12-19T03:57:55.732Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hibernate (二)">
 <meta name="twitter:description" content="Hibernate 基础篇（二），我们一起学习 Hibernate。">
-<meta name="twitter:image" content="http://pifu006nk.bkt.clouddn.com/blog/20181122/WfN4BDIOLV6a.jpg?imageslim">
+<meta name="twitter:image" content="https://api.superbed.cn/pic/5c19c1a8c4ff9e2b4d698e5c">
 
 
 
@@ -529,8 +529,8 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="http://pifu006nk.bkt.clouddn.com/blog/20181122/WfN4BDIOLV6a.jpg?imageslim" rel="gallery_cjpe3yhvz00015gtkxblnrya0" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://pifu006nk.bkt.clouddn.com/blog/20181122/WfN4BDIOLV6a.jpg?imageslim" itemprop="contentUrl">
+              <a class="post-gallery-img fancybox" href="https://api.superbed.cn/pic/5c19c1a8c4ff9e2b4d698e5c" rel="gallery_cjpunfjwz0003zotku8prwysk" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://api.superbed.cn/pic/5c19c1a8c4ff9e2b4d698e5c" itemprop="contentUrl">
               </a>
             
           
@@ -570,7 +570,7 @@
 <h3 id="脱管态"><a href="#脱管态" class="headerlink" title="脱管态"></a>脱管态</h3><p>此状态对象有唯一标识 OID，但没有被 session 管理，称为脱管态对象。</p>
 <h3 id="如何区分三种状态对象"><a href="#如何区分三种状态对象" class="headerlink" title="如何区分三种状态对象"></a>如何区分三种状态对象</h3><p>通过一段代码解释</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Session session = HibernateUtils.openSession();</span><br><span class="line">    Transaction transaction = session.beginTransaction();</span><br><span class="line"></span><br><span class="line">    Customer customer = <span class="keyword">new</span> Customer();		    <span class="comment">// 瞬时态对象，没有唯一标识 OID，没有被 session 管理</span></span><br><span class="line">    customer.setCust_name(<span class="string">"李四"</span>);</span><br><span class="line">    Serializable id = session.save(customer);	<span class="comment">// 持久态对象，有唯一标识 OID，被 session 管理</span></span><br><span class="line"></span><br><span class="line">    transaction.commit();</span><br><span class="line">    session.close();						  <span class="comment">// 脱管态对象，有唯一标识 OID，没有被 session 管理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="三种状态对象的转换"><a href="#三种状态对象的转换" class="headerlink" title="三种状态对象的转换"></a>三种状态对象的转换</h3><p><img src="http://pifu006nk.bkt.clouddn.com/blog/20181122/IaarSkIsG8j2.jpg?imageslim" alt="mark"></p>
+<h3 id="三种状态对象的转换"><a href="#三种状态对象的转换" class="headerlink" title="三种状态对象的转换"></a>三种状态对象的转换</h3><p><img src="https://api.superbed.cn/pic/5c19c1a8c4ff9e2b4d698e5d" alt="mark"></p>
 <h4 id="瞬时态对象"><a href="#瞬时态对象" class="headerlink" title="瞬时态对象"></a>瞬时态对象</h4><p>获得：<code>Customer customer = new Customer()</code>，简单来说就是 new</p>
 <p>状态转换：</p>
 <ul>
@@ -683,7 +683,7 @@
   <p><span>本文标题:</span><a href="/hibernate02/">Hibernate (二)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Tong 的个人博客">Tong</a></p>
   <p><span>发布时间:</span>2018年11月22日 - 19:27</p>
-  <p><span>最后更新:</span>2018年11月22日 - 19:42</p>
+  <p><span>最后更新:</span>2018年12月19日 - 11:57</p>
   <p><span>原始链接:</span><a href="/hibernate02/" title="Hibernate (二)">hellotong.ml/hibernate02/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="hellotong.ml/hibernate02/" aria-label="复制成功！"></i></span>
   </p>
