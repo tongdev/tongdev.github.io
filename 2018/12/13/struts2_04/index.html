@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "e5243865"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
+
+
+  <meta name="keywords" content="Java,Struts2,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="hellotong" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="Struts2 基础完结篇（四），Struts2 是基于 MVC 设计模式的 Web 层框架，让我们开启 Struts2 学习之旅吧。">
+<meta name="keywords" content="Java,Struts2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Struts2（四）">
+<meta property="og:url" content="hellotong.ml/2018/12/13/struts2_04/index.html">
+<meta property="og:site_name" content="hellotong">
+<meta property="og:description" content="Struts2 基础完结篇（四），Struts2 是基于 MVC 设计模式的 Web 层框架，让我们开启 Struts2 学习之旅吧。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://api.superbed.cn/pic/5c19c32bc4ff9e2b4e0451d8">
+<meta property="og:updated_time" content="2018-12-19T04:09:53.504Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Struts2（四）">
+<meta name="twitter:description" content="Struts2 基础完结篇（四），Struts2 是基于 MVC 设计模式的 Web 层框架，让我们开启 Struts2 学习之旅吧。">
+<meta name="twitter:image" content="https://api.superbed.cn/pic/5c19c32bc4ff9e2b4e0451d8">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '8P44RY6XWF',
+      apiKey: 'f7a26ba23d8197f4592ef4dae98dfd84',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="hellotong.ml/2018/12/13/struts2_04/">
+
+
+
+
+
+  <title>Struts2（四） | hellotong</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/tongdev" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hellotong</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Hello tong, hello world!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="hellotong.ml/2018/12/13/struts2_04/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hellotong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Struts2（四）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-01T19:42:48+08:00">
+                2018-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/12/13/struts2_04/" class="leancloud_visitors" data-flag-title="Struts2（四）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  11
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  Struts2 基础完结篇（四），Struts2 是基于 MVC 设计模式的 Web 层框架，让我们开启 Struts2 学习之旅吧。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox" href="https://api.superbed.cn/pic/5c19c32bc4ff9e2b4e0451d8" rel="gallery_ck8pd6ryb00042stkdml98lmp" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://api.superbed.cn/pic/5c19c32bc4ff9e2b4e0451d8" itemprop="contentUrl">
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        <h2 id="Struts2-的拦截器"><a href="#Struts2-的拦截器" class="headerlink" title="Struts2 的拦截器"></a>Struts2 的拦截器</h2><h3 id="拦截器概述"><a href="#拦截器概述" class="headerlink" title="拦截器概述"></a>拦截器概述</h3><h4 id="什么是拦截器"><a href="#什么是拦截器" class="headerlink" title="什么是拦截器"></a>什么是拦截器</h4><p>动态拦截 Action 调用的对象。</p>
+<h4 id="Filter-和-Inteceptor-的区别"><a href="#Filter-和-Inteceptor-的区别" class="headerlink" title="Filter 和 Inteceptor 的区别"></a>Filter 和 Inteceptor 的区别</h4><p>Filter：过滤器，过滤从客户端向服务器发送的请求。</p>
+<p>Interceptor：拦截器。拦截的是客户端对 Action 的访问，更加细粒度化的拦截。</p>
+<h2 id="Struts2-的执行流程"><a href="#Struts2-的执行流程" class="headerlink" title="Struts2 的执行流程"></a>Struts2 的执行流程</h2><p>客户端向服务器发送一个 Action 的请求，执行核心过滤器 doFilter() 方法，在这个方法中，调用 executeAction() 方法，在这个方法内部调用 dispatcher.serviceAction() 方法，在这个方法内部创建一个 Action 代理，最终执行的是 Action 代理中的 execute() 方法，在代理中执行的 execute() 方法中调用 ActionInvocation 的 invoke 方法。在这个方法内部递归执行一组拦截器，如果没有下一个拦截器的话，就执行目标 Action，根据 Action 的返回的结果进行页面跳转。</p>
+<p><img src="https://api.superbed.cn/pic/5c19c44ac4ff9e2b4d698e67" alt="mark"></p>
+<h2 id="拦截器入门"><a href="#拦截器入门" class="headerlink" title="拦截器入门"></a>拦截器入门</h2><h3 id="编写拦截器类"><a href="#编写拦截器类" class="headerlink" title="编写拦截器类"></a>编写拦截器类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 自定义拦截器一</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Tong</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InteceptorDemo1</span> <span class="keyword">extends</span> <span class="title">AbstractInterceptor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">intercept</span><span class="params">(ActionInvocation invocation)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"InterceptorDemo1 执行了..."</span>);</span><br><span class="line">		String invoke = invocation.invoke();</span><br><span class="line">		System.out.println(<span class="string">"InterceptorDemo1 结束了..."</span>);</span><br><span class="line">		<span class="keyword">return</span> invoke;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="配置拦截器"><a href="#配置拦截器" class="headerlink" title="配置拦截器"></a>配置拦截器</h3><blockquote>
+<p>有两种配置方式</p>
+</blockquote>
+<h4 id="自定义拦截器，引入拦截器"><a href="#自定义拦截器，引入拦截器" class="headerlink" title="自定义拦截器，引入拦截器"></a>自定义拦截器，引入拦截器</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"demo1"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span> <span class="attr">namespace</span>=<span class="string">"/"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 自定义拦截器 === 配置方式一--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">interceptors</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">interceptor</span> <span class="attr">name</span>=<span class="string">"InterceptorDemo1"</span> <span class="attr">class</span>=<span class="string">"com.test.web.interceptor.InteceptorDemo1"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">interceptor</span> <span class="attr">name</span>=<span class="string">"InterceptorDemo2"</span> <span class="attr">class</span>=<span class="string">"com.test.web.interceptor.InteceptorDemo2"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">interceptors</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"actionDemo1"</span> <span class="attr">class</span>=<span class="string">"com.test.web.action.ActionDemo1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span>&gt;</span>/demo1/demo1.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!-- 引入自定义拦截器（自定义拦截器之后默认拦截器就不执行了，如果需要一定要手动引入默认拦截器栈中的拦截器） --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">interceptor-ref</span> <span class="attr">name</span>=<span class="string">"defaultStack"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">interceptor-ref</span> <span class="attr">name</span>=<span class="string">"InterceptorDemo1"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">interceptor-ref</span> <span class="attr">name</span>=<span class="string">"InterceptorDemo2"</span> /&gt;</span></span><br><span class="line">        </span><br><span class="line">    <span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="自定义拦截器栈，引入拦截器栈"><a href="#自定义拦截器栈，引入拦截器栈" class="headerlink" title="自定义拦截器栈，引入拦截器栈"></a>自定义拦截器栈，引入拦截器栈</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"demo1"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span> <span class="attr">namespace</span>=<span class="string">"/"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 自定义拦截器栈 === 配置方式二--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">interceptors</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">interceptor</span> <span class="attr">name</span>=<span class="string">"InterceptorDemo1"</span> <span class="attr">class</span>=<span class="string">"com.test.web.interceptor.InteceptorDemo1"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">interceptor</span> <span class="attr">name</span>=<span class="string">"InterceptorDemo2"</span> <span class="attr">class</span>=<span class="string">"com.test.web.interceptor.InteceptorDemo2"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">interceptor-stack</span> <span class="attr">name</span>=<span class="string">"myStack"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">interceptor-ref</span> <span class="attr">name</span>=<span class="string">"defaultStack"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">interceptor-ref</span> <span class="attr">name</span>=<span class="string">"InterceptorDemo1"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">interceptor-ref</span> <span class="attr">name</span>=<span class="string">"InterceptorDemo2"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">interceptor-stack</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">interceptors</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"actionDemo1"</span> <span class="attr">class</span>=<span class="string">"com.test.web.action.ActionDemo1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span>&gt;</span>/demo1/demo1.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!-- 引入自定义拦截器栈 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">interceptor-ref</span> <span class="attr">name</span>=<span class="string">"myStack"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="CRM-权限拦截器案例"><a href="#CRM-权限拦截器案例" class="headerlink" title="CRM 权限拦截器案例"></a>CRM 权限拦截器案例</h2><h3 id="实现用户登录功能"><a href="#实现用户登录功能" class="headerlink" title="实现用户登录功能"></a>实现用户登录功能</h3><h4 id="创建数据库表和实体"><a href="#创建数据库表和实体" class="headerlink" title="创建数据库表和实体"></a>创建数据库表和实体</h4><h5 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h5><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`sys_user`</span> (</span><br><span class="line">  <span class="string">`user_id`</span> <span class="built_in">bigint</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT <span class="keyword">COMMENT</span> <span class="string">'用户id'</span>,</span><br><span class="line">  <span class="string">`user_code`</span> <span class="built_in">varchar</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'用户账号'</span>,</span><br><span class="line">  <span class="string">`user_name`</span> <span class="built_in">varchar</span>(<span class="number">64</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'用户名称'</span>,</span><br><span class="line">  <span class="string">`user_password`</span> <span class="built_in">varchar</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'用户密码'</span>,</span><br><span class="line">  <span class="string">`user_state`</span> <span class="built_in">char</span>(<span class="number">1</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">'1:正常,0:暂停'</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`user_id`</span>)</span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> AUTO_INCREMENT=<span class="number">1</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span><br></pre></td></tr></table></figure>
+<h5 id="创建实体"><a href="#创建实体" class="headerlink" title="创建实体"></a>创建实体</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">private</span> Long user_id;</span><br><span class="line">	<span class="keyword">private</span> String user_code;</span><br><span class="line">	<span class="keyword">private</span> String user_name;</span><br><span class="line">	<span class="keyword">private</span> String user_password;</span><br><span class="line">	<span class="keyword">private</span> String user_state;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> Long <span class="title">getUser_id</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> user_id;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUser_id</span><span class="params">(Long user_id)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.user_id = user_id;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getUser_code</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> user_code;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUser_code</span><span class="params">(String user_code)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.user_code = user_code;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getUser_name</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> user_name;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUser_name</span><span class="params">(String user_name)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.user_name = user_name;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getUser_password</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> user_password;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUser_password</span><span class="params">(String user_password)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.user_password = user_password;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getUser_state</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> user_state;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUser_state</span><span class="params">(String user_state)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.user_state = user_state;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"User [user_id="</span> + user_id + <span class="string">", user_code="</span> + user_code + <span class="string">", user_name="</span> + user_name + <span class="string">", user_password="</span></span><br><span class="line">				+ user_password + <span class="string">", user_state="</span> + user_state + <span class="string">"]"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Action-类"><a href="#Action-类" class="headerlink" title="Action 类"></a>Action 类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 用户的 Action 类</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Tong</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserAction</span> <span class="keyword">extends</span> <span class="title">ActionSupport</span> <span class="keyword">implements</span> <span class="title">ModelDriven</span>&lt;<span class="title">User</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 接收数据封装数据</span></span><br><span class="line">	<span class="keyword">private</span> User user = <span class="keyword">new</span> User();</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> User <span class="title">getModel</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> user;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 用户的登录方法</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">login</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">//System.out.println(user);</span></span><br><span class="line">		<span class="comment">// 调用 service 层的登录方法</span></span><br><span class="line">		UserService userService = <span class="keyword">new</span> UserServiceImpl();</span><br><span class="line">		User existUser = userService.login(user);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 判断该用户是否存在，进行页面跳转</span></span><br><span class="line">		<span class="keyword">if</span> (existUser != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="comment">// 如果存在，跳转到 index.jsp 页面，并将该 user 对象存到 session 域中</span></span><br><span class="line">			ServletActionContext.getRequest().getSession().setAttribute(<span class="string">"user"</span>, existUser);</span><br><span class="line">			<span class="keyword">return</span> SUCCESS;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="comment">// 如果不存在，跳转到登录页面</span></span><br><span class="line">			<span class="comment">// 添加错误信息，写回到页面上</span></span><br><span class="line">			addActionError(<span class="string">"用户名或密码错误!"</span>);</span><br><span class="line">			<span class="keyword">return</span> LOGIN;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Service-层实现类"><a href="#Service-层实现类" class="headerlink" title="Service 层实现类"></a>Service 层实现类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 用户的业务层的接口的实现类</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Tong</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserServiceImpl</span> <span class="keyword">implements</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="comment">// 用户 service 层的登录方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> User <span class="title">login</span><span class="params">(User user)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 调用 dao 层的登录方法</span></span><br><span class="line">		UserDao userDao = <span class="keyword">new</span> UserDaoImpl();</span><br><span class="line">		<span class="keyword">return</span> userDao.login(user);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Dao-层实现类"><a href="#Dao-层实现类" class="headerlink" title="Dao 层实现类"></a>Dao 层实现类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 用户的 dao 层接口的实现类</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Tong</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserDaoImpl</span> <span class="keyword">implements</span> <span class="title">UserDao</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="comment">// 用户 dao 层的登录方法</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> User <span class="title">login</span><span class="params">(User user)</span> </span>&#123;</span><br><span class="line">		Session session = HibernateUtils.getCurrentSession();</span><br><span class="line">		Transaction tx = session.beginTransaction();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 根据用户名和密码查询该用户是否存在</span></span><br><span class="line">		Query query = session.createQuery(<span class="string">"from User where user_code=? and user_password=?"</span>);</span><br><span class="line">		<span class="comment">// 设置参数</span></span><br><span class="line">		query.setParameter(<span class="number">0</span>, user.getUser_code());</span><br><span class="line">		query.setParameter(<span class="number">1</span>, user.getUser_password());</span><br><span class="line">		User existUser = (User) query.uniqueResult();</span><br><span class="line">		<span class="comment">// 如果该用户存在，返回该用户</span></span><br><span class="line">		<span class="keyword">if</span> (existUser != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> existUser;</span><br><span class="line">		&#125;</span><br><span class="line">		tx.commit();</span><br><span class="line">		<span class="comment">// 如果不存在，返回 null</span></span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="根据结果进行页面跳转"><a href="#根据结果进行页面跳转" class="headerlink" title="根据结果进行页面跳转"></a>根据结果进行页面跳转</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 配置用户的 action --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"user_*"</span> <span class="attr">class</span>=<span class="string">"com.test.web.action.UserAction"</span> <span class="attr">method</span>=<span class="string">"&#123;1&#125;"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 登录成功 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"success"</span> <span class="attr">type</span>=<span class="string">"redirect"</span>&gt;</span>/index.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 登录失败 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"login"</span>&gt;</span>/login.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="实现权限拦截器"><a href="#实现权限拦截器" class="headerlink" title="实现权限拦截器"></a>实现权限拦截器</h3><h4 id="编写拦截器类-1"><a href="#编写拦截器类-1" class="headerlink" title="编写拦截器类"></a>编写拦截器类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 自定义权限控制拦截器</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Tong</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrivilegeInteceptor</span> <span class="keyword">extends</span> <span class="title">MethodFilterInterceptor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> String <span class="title">doIntercept</span><span class="params">(ActionInvocation invocation)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		<span class="comment">// 获得 Session</span></span><br><span class="line">		User user = (User) ServletActionContext.getRequest().getSession().getAttribute(<span class="string">"user"</span>);</span><br><span class="line">		<span class="comment">// 判断 session 中是否包含 user 对象</span></span><br><span class="line">		<span class="keyword">if</span> (user != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="comment">// 如果包含，放行</span></span><br><span class="line">			<span class="keyword">return</span> invocation.invoke();</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="comment">// 如果不包含，拦截</span></span><br><span class="line">			<span class="comment">// 跳转到登录页面，给出提示信息</span></span><br><span class="line">			ActionSupport actionSupport = (ActionSupport) invocation.getAction();</span><br><span class="line">			actionSupport.addActionError(<span class="string">"用户未登录，没有权限进行以下操作！"</span>);</span><br><span class="line">			<span class="keyword">return</span> actionSupport.LOGIN;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="配置拦截器-1"><a href="#配置拦截器-1" class="headerlink" title="配置拦截器"></a>配置拦截器</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span> ?&gt;</span><br><span class="line">&lt;!DOCTYPE struts PUBLIC</span><br><span class="line">	<span class="string">"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"</span></span><br><span class="line">	<span class="string">"http://struts.apache.org/dtds/struts-2.3.dtd"</span>&gt;</span><br><span class="line">&lt;struts&gt;</span><br><span class="line">	&lt;!-- 配置Struts2的常量 --&gt;</span><br><span class="line">	&lt;constant name=<span class="string">"struts.action.extension"</span> value=<span class="string">"action"</span>/&gt;</span><br><span class="line"></span><br><span class="line">	&lt;<span class="keyword">package</span> name=<span class="string">"crm"</span> extends=<span class="string">"struts-default"</span> namespace=<span class="string">"/"</span>&gt;</span><br><span class="line">		&lt;!-- 配置自定义拦截器 --&gt;</span><br><span class="line">		&lt;interceptors&gt;</span><br><span class="line">			&lt;interceptor name=<span class="string">"privilegeInteceptor"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"com.test.web.interceptor.PrivilegeInteceptor"</span>/&gt;</span><br><span class="line">		&lt;/interceptors&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;!-- 配置全局结果页面 --&gt;</span><br><span class="line">		&lt;global-results&gt;</span><br><span class="line">			&lt;!-- LOGIN --&gt;</span><br><span class="line">			&lt;result name="login"&gt;/login.jsp&lt;/result&gt;</span><br><span class="line">		&lt;/global-results&gt;</span><br><span class="line">	</span><br><span class="line">		&lt;!-- 配置客户的 action --&gt;</span><br><span class="line">		&lt;action name=<span class="string">"customer_*"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"com.test.web.action.CustomerAction"</span> method=<span class="string">"&#123;1&#125;"</span>&gt;</span><br><span class="line">			&lt;result name="findSuccess"&gt;/jsp/customer/list.jsp&lt;/result&gt;</span><br><span class="line">			&lt;result name="saveUI"&gt;/jsp/customer/add.jsp&lt;/result&gt;</span><br><span class="line">			&lt;result name="saveSuccess" type="redirectAction"&gt;customer_find.action&lt;/result&gt;</span><br><span class="line">			</span><br><span class="line">			&lt;!-- 引入拦截器配置 --&gt;			</span><br><span class="line">			&lt;interceptor-ref name=<span class="string">"privilegeInteceptor"</span>&gt;</span><br><span class="line">				&lt;!-- 不拦截 login 方法，其他方法都拦截 --&gt;</span><br><span class="line">				&lt;param name="excludeMethods"&gt;login&lt;/param&gt;	</span><br><span class="line">			&lt;/interceptor-ref&gt;</span><br><span class="line">			&lt;interceptor-ref name=<span class="string">"defaultStack"</span>/&gt;</span><br><span class="line">		&lt;/action&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;!-- 配置用户的 action --&gt;</span><br><span class="line">		&lt;action name=<span class="string">"user_*"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"com.test.web.action.UserAction"</span> method=<span class="string">"&#123;1&#125;"</span>&gt;</span><br><span class="line">			&lt;!-- 登录成功 --&gt;</span><br><span class="line">			&lt;result name="success" type="redirect"&gt;/index.jsp&lt;/result&gt;</span><br><span class="line">			&lt;!-- 登录失败 --&gt;</span><br><span class="line">			&lt;!-- &lt;result name="login"&gt;/login.jsp&lt;/result&gt; --&gt;</span><br><span class="line">			</span><br><span class="line">			&lt;!-- 引入拦截器配置 --&gt;			</span><br><span class="line">			&lt;interceptor-ref name=<span class="string">"privilegeInteceptor"</span>&gt;</span><br><span class="line">				&lt;!-- 不拦截 login 方法，其他方法都拦截 --&gt;</span><br><span class="line">				&lt;param name="excludeMethods"&gt;login&lt;/param&gt;	</span><br><span class="line">			&lt;/interceptor-ref&gt;</span><br><span class="line">			&lt;interceptor-ref name=<span class="string">"defaultStack"</span>/&gt;</span><br><span class="line">		&lt;/action&gt;</span><br><span class="line">	&lt;/package&gt;</span><br><span class="line">&lt;/struts&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Struts2-的标签库"><a href="#Struts2-的标签库" class="headerlink" title="Struts2 的标签库"></a>Struts2 的标签库</h2><h3 id="通用标签库"><a href="#通用标签库" class="headerlink" title="通用标签库"></a>通用标签库</h3><p><img src="https://api.superbed.cn/pic/5c19c44ac4ff9e2b4d698e69" alt="mark"></p>
+<p>常用的标签有判断标签、迭代标签、property 标签和 debug 标签</p>
+<h4 id="判断标签"><a href="#判断标签" class="headerlink" title="判断标签"></a>判断标签</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;s:set var="i" value="3" scope="request"&gt;&lt;/s:set&gt;</span><br><span class="line">&lt;s:<span class="keyword">if</span> test=<span class="string">"#request.i&gt;3"</span>&gt;</span><br><span class="line">	i 大于 <span class="number">3</span></span><br><span class="line">&lt;/s:if&gt;</span><br><span class="line">&lt;s:elseif test=<span class="string">"#request.i&lt;3"</span>&gt;</span><br><span class="line">	i 小于 <span class="number">3</span></span><br><span class="line">&lt;/s:elseif&gt;</span><br><span class="line">&lt;s:<span class="keyword">else</span>&gt;</span><br><span class="line">	i 等于 <span class="number">3</span></span><br><span class="line">&lt;/s:else&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="迭代标签"><a href="#迭代标签" class="headerlink" title="迭代标签"></a>迭代标签</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;s:iterator value=<span class="string">"#&#123;'aa':'11','bb':'22','cc':'33'&#125;"</span>&gt;</span><br><span class="line">	&lt;s:property value=<span class="string">"key"</span> /&gt;---&lt;s:property value=<span class="string">"value"</span> /&gt;</span><br><span class="line">&lt;/s:iterator&gt;</span><br><span class="line">&lt;hr&gt;</span><br><span class="line">&lt;s:iterator begin=<span class="string">"1"</span> end=<span class="string">"100"</span> step=<span class="string">"1"</span> status=<span class="string">"status"</span>&gt;</span><br><span class="line">	&lt;s:property value=<span class="string">"#status.count"</span>/&gt;</span><br><span class="line">&lt;/s:iterator&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="UI-标签库"><a href="#UI-标签库" class="headerlink" title="UI 标签库"></a>UI 标签库</h3><p><img src="https://api.superbed.cn/pic/5c19c44ac4ff9e2b4d698e68" alt="mark"></p>
+<p>传统标签和 UI 标签的对比</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;h3&gt;传统标签&lt;/h3&gt;</span><br><span class="line">&lt;form action=<span class="string">"$&#123; pageContext.request.contextPath &#125;/uiAction.action"</span> method=<span class="string">"post"</span>&gt;</span><br><span class="line">	用户名：&lt;input type=<span class="string">"text"</span> name=<span class="string">"username"</span>/&gt;&lt;br/&gt;</span><br><span class="line">	密码：&lt;input type=<span class="string">"password"</span> name=<span class="string">"password"</span>/&gt;&lt;br/&gt;</span><br><span class="line">	年龄：&lt;input type=<span class="string">"text"</span> name=<span class="string">"age"</span>/&gt;&lt;br/&gt;</span><br><span class="line">	性别：&lt;input type=<span class="string">"radio"</span> name=<span class="string">"sex"</span> value=<span class="string">"女"</span>/&gt;男</span><br><span class="line">	&lt;input type=<span class="string">"radio"</span> name=<span class="string">"sex"</span> value=<span class="string">"女"</span>/&gt;女&lt;br/&gt;</span><br><span class="line">	籍贯：&lt;select name=<span class="string">"city"</span>&gt;</span><br><span class="line">			&lt;option value=""&gt;--请选择--&lt;/option&gt;</span><br><span class="line">			&lt;option value="北京"&gt;北京&lt;/option&gt;</span><br><span class="line">			&lt;option value="上海"&gt;上海&lt;/option&gt;</span><br><span class="line">		&lt;/select&gt;&lt;br/&gt;</span><br><span class="line">	爱好：&lt;input type=<span class="string">"checkbox"</span> name=<span class="string">"hobby"</span> value=<span class="string">"basketball"</span>/&gt;篮球</span><br><span class="line">		&lt;input type=<span class="string">"checkbox"</span> name=<span class="string">"hobby"</span> value=<span class="string">"football"</span>/&gt;足球</span><br><span class="line">		&lt;input type=<span class="string">"checkbox"</span> name=<span class="string">"hobby"</span> value=<span class="string">"volleyball"</span>/&gt;排球</span><br><span class="line">		&lt;br/&gt;</span><br><span class="line">	自我介绍：&lt;textarea rows="2" cols="10" name="info"&gt;&lt;/textarea&gt;&lt;br/&gt;</span><br><span class="line">	&lt;input type=<span class="string">"submit"</span> value=<span class="string">"提交"</span>/&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">&lt;h3&gt;UI 标签&lt;/h3&gt;</span><br><span class="line">&lt;s:form action=<span class="string">"uiAction"</span> namespace=<span class="string">"/"</span> method=<span class="string">"post"</span>&gt;</span><br><span class="line">	&lt;s:textfield name=<span class="string">"username"</span> label=<span class="string">"用户名"</span>/&gt;</span><br><span class="line">	&lt;s:password name=<span class="string">"password"</span> label=<span class="string">"密码"</span> showPassword=<span class="string">"true"</span>/&gt;</span><br><span class="line">	&lt;s:textfield name=<span class="string">"age"</span> label=<span class="string">"年龄"</span>/&gt;</span><br><span class="line">	&lt;s:radio list=<span class="string">"&#123;'男','女'&#125;"</span> name=<span class="string">"sex"</span> label=<span class="string">"性别"</span>/&gt;</span><br><span class="line">	&lt;s:select list=<span class="string">"&#123;'北京','上海'&#125;"</span> name=<span class="string">"city"</span> label=<span class="string">"籍贯"</span> headerKey=<span class="string">""</span> headerValue=<span class="string">"--请选择--"</span>/&gt;</span><br><span class="line">	&lt;s:checkboxlist list=<span class="string">"#&#123;'basketball':'篮球','football':'足球','volleyball':'排球' &#125;"</span> name=<span class="string">"hobby"</span> label=<span class="string">"爱好"</span> /&gt;</span><br><span class="line">	&lt;s:textarea name="info" rows="2" cols="10" label="自我介绍"&gt;&lt;/s:textarea&gt;</span><br><span class="line">	&lt;s:submit value=<span class="string">"提交"</span>/&gt;</span><br><span class="line">&lt;/s:form&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><p>学会自定义拦截器并配置以及一些常用标签的使用。</p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    <div>
+        
+          
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/12/13/struts2_04/">Struts2（四）</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Tong 的个人博客">Tong</a></p>
+  <p><span>发布时间:</span>2018年12月01日 - 19:42</p>
+  <p><span>最后更新:</span>2018年12月19日 - 12:09</p>
+  <p><span>原始链接:</span><a href="/2018/12/13/struts2_04/" title="Struts2（四）">hellotong.ml/2018/12/13/struts2_04/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="hellotong.ml/2018/12/13/struts2_04/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+        
+    </div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创分享，您的支持是对我最大的鼓励！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Tong 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Tong 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/Struts2/" rel="tag"><i class="fa fa-tag"></i> Struts2</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/12/struts2_03/" rel="next" title="Struts2（三）">
+                <i class="fa fa-chevron-left"></i> Struts2（三）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/18/spring_01/" rel="prev" title="Spring（一）">
+                Spring（一） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bf2c42fb76c9421" async="async"></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTEzMy8xNzY4MQ=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <style>
+      // hellotong 修改
+      * {
+        background-color: #ccc;
+      }
+
+    
+  </style>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/logo.jpg" alt="Tong">
+            
+              <p class="site-author-name" itemprop="name">Tong</p>
+              <p class="site-description motion-element" itemprop="description">Coding Wirting</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/tongdev" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/Xiang__Qian" target="_blank" title="csdn">
+                      
+                        <i class="fa fa-fw fa-globe"></i>csdn</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="tencent://message/?uin=1239163065&Menu=yes" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-globe"></i>QQ</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/3173e61b6208" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-globe"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.baidu.com/" title="Baidu" target="_blank">Baidu</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.google.com/" title="Google" target="_blank">Google</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Struts2-的拦截器"><span class="nav-number">1.</span> <span class="nav-text">Struts2 的拦截器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#拦截器概述"><span class="nav-number">1.1.</span> <span class="nav-text">拦截器概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是拦截器"><span class="nav-number">1.1.1.</span> <span class="nav-text">什么是拦截器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Filter-和-Inteceptor-的区别"><span class="nav-number">1.1.2.</span> <span class="nav-text">Filter 和 Inteceptor 的区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Struts2-的执行流程"><span class="nav-number">2.</span> <span class="nav-text">Struts2 的执行流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拦截器入门"><span class="nav-number">3.</span> <span class="nav-text">拦截器入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编写拦截器类"><span class="nav-number">3.1.</span> <span class="nav-text">编写拦截器类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置拦截器"><span class="nav-number">3.2.</span> <span class="nav-text">配置拦截器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义拦截器，引入拦截器"><span class="nav-number">3.2.1.</span> <span class="nav-text">自定义拦截器，引入拦截器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义拦截器栈，引入拦截器栈"><span class="nav-number">3.2.2.</span> <span class="nav-text">自定义拦截器栈，引入拦截器栈</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CRM-权限拦截器案例"><span class="nav-number">4.</span> <span class="nav-text">CRM 权限拦截器案例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实现用户登录功能"><span class="nav-number">4.1.</span> <span class="nav-text">实现用户登录功能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建数据库表和实体"><span class="nav-number">4.1.1.</span> <span class="nav-text">创建数据库表和实体</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建表"><span class="nav-number">4.1.1.1.</span> <span class="nav-text">创建表</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#创建实体"><span class="nav-number">4.1.1.2.</span> <span class="nav-text">创建实体</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Action-类"><span class="nav-number">4.1.2.</span> <span class="nav-text">Action 类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Service-层实现类"><span class="nav-number">4.1.3.</span> <span class="nav-text">Service 层实现类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dao-层实现类"><span class="nav-number">4.1.4.</span> <span class="nav-text">Dao 层实现类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#根据结果进行页面跳转"><span class="nav-number">4.1.5.</span> <span class="nav-text">根据结果进行页面跳转</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现权限拦截器"><span class="nav-number">4.2.</span> <span class="nav-text">实现权限拦截器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#编写拦截器类-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">编写拦截器类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置拦截器-1"><span class="nav-number">4.2.2.</span> <span class="nav-text">配置拦截器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Struts2-的标签库"><span class="nav-number">5.</span> <span class="nav-text">Struts2 的标签库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通用标签库"><span class="nav-number">5.1.</span> <span class="nav-text">通用标签库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#判断标签"><span class="nav-number">5.1.1.</span> <span class="nav-text">判断标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代标签"><span class="nav-number">5.1.2.</span> <span class="nav-text">迭代标签</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UI-标签库"><span class="nav-number">5.2.</span> <span class="nav-text">UI 标签库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习目标"><span class="nav-number">6.</span> <span class="nav-text">学习目标</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+
+    <div id="music163player">
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=103301&auto=0&height=66"></iframe>
+    </div>
+
+  </aside>
+
+
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tong</span>
+
+  
+</div>
+
+
+
+
+<!-- 博客访问人数 -->
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span></span>
+</div>
+<!--
+<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+-->
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+
+<!--
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+-->
+
+
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共31.3k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("J39oFR5KqD1hx65POsdEtkMV-gzGzoHsz", "XAuJAMQg2JtLHWKeyKDhEwFF");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>
+
+<!-- 代码块复制功能 --> 
+<script type="text/javascript" src="/js/src/clipboard.min.js"></script> 
+<script type="text/javascript" src="/js/src/clipboard-use.js"></script>

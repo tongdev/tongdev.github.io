@@ -18,8 +18,8 @@
   
   <entry>
     <title>Spring（三）</title>
-    <link href="hellotong.ml/2018/spring_03/"/>
-    <id>hellotong.ml/2018/spring_03/</id>
+    <link href="hellotong.ml/2018/12/20/spring_03/"/>
+    <id>hellotong.ml/2018/12/20/spring_03/</id>
     <published>2018-12-07T14:01:29.920Z</published>
     <updated>2018-12-19T04:12:48.076Z</updated>
     
@@ -42,8 +42,8 @@
   
   <entry>
     <title>Spring（二）</title>
-    <link href="hellotong.ml/2018/spring_02/"/>
-    <id>hellotong.ml/2018/spring_02/</id>
+    <link href="hellotong.ml/2018/12/19/spring_02/"/>
+    <id>hellotong.ml/2018/12/19/spring_02/</id>
     <published>2018-12-06T13:51:34.601Z</published>
     <updated>2018-12-19T04:12:05.992Z</updated>
     
@@ -66,8 +66,8 @@
   
   <entry>
     <title>Spring（一）</title>
-    <link href="hellotong.ml/2018/spring_01/"/>
-    <id>hellotong.ml/2018/spring_01/</id>
+    <link href="hellotong.ml/2018/12/18/spring_01/"/>
+    <id>hellotong.ml/2018/12/18/spring_01/</id>
     <published>2018-12-04T13:29:56.591Z</published>
     <updated>2018-12-19T04:11:47.608Z</updated>
     
@@ -90,8 +90,8 @@
   
   <entry>
     <title>Struts2（四）</title>
-    <link href="hellotong.ml/2018/struts2_04/"/>
-    <id>hellotong.ml/2018/struts2_04/</id>
+    <link href="hellotong.ml/2018/12/13/struts2_04/"/>
+    <id>hellotong.ml/2018/12/13/struts2_04/</id>
     <published>2018-12-01T11:42:48.187Z</published>
     <updated>2018-12-19T04:09:53.504Z</updated>
     
@@ -114,8 +114,8 @@
   
   <entry>
     <title>Struts2（三）</title>
-    <link href="hellotong.ml/2018/struts2_03/"/>
-    <id>hellotong.ml/2018/struts2_03/</id>
+    <link href="hellotong.ml/2018/12/12/struts2_03/"/>
+    <id>hellotong.ml/2018/12/12/struts2_03/</id>
     <published>2018-11-29T13:44:24.525Z</published>
     <updated>2018-12-19T04:04:50.260Z</updated>
     
@@ -138,8 +138,8 @@
   
   <entry>
     <title>Struts2（二）</title>
-    <link href="hellotong.ml/2018/struts2_02/"/>
-    <id>hellotong.ml/2018/struts2_02/</id>
+    <link href="hellotong.ml/2018/12/11/struts2_02/"/>
+    <id>hellotong.ml/2018/12/11/struts2_02/</id>
     <published>2018-11-28T12:45:01.926Z</published>
     <updated>2018-12-19T04:08:11.693Z</updated>
     
@@ -162,8 +162,8 @@
   
   <entry>
     <title>Struts2（一）</title>
-    <link href="hellotong.ml/2018/struts2_01/"/>
-    <id>hellotong.ml/2018/struts2_01/</id>
+    <link href="hellotong.ml/2018/12/10/struts2_01/"/>
+    <id>hellotong.ml/2018/12/10/struts2_01/</id>
     <published>2018-11-27T11:29:40.348Z</published>
     <updated>2018-12-19T04:07:16.340Z</updated>
     
@@ -186,8 +186,8 @@
   
   <entry>
     <title>Hibernate (四)</title>
-    <link href="hellotong.ml/2018/hibernate04/"/>
-    <id>hellotong.ml/2018/hibernate04/</id>
+    <link href="hellotong.ml/2018/12/17/hibernate04/"/>
+    <id>hellotong.ml/2018/12/17/hibernate04/</id>
     <published>2018-11-25T13:48:14.110Z</published>
     <updated>2018-12-19T03:58:44.613Z</updated>
     
@@ -210,8 +210,8 @@
   
   <entry>
     <title>Hibernate (三)</title>
-    <link href="hellotong.ml/2018/hibernate03/"/>
-    <id>hellotong.ml/2018/hibernate03/</id>
+    <link href="hellotong.ml/2018/12/16/hibernate03/"/>
+    <id>hellotong.ml/2018/12/16/hibernate03/</id>
     <published>2018-11-23T13:28:32.432Z</published>
     <updated>2018-12-19T03:58:34.814Z</updated>
     
@@ -234,8 +234,8 @@
   
   <entry>
     <title>Hibernate (二)</title>
-    <link href="hellotong.ml/2018/hibernate02/"/>
-    <id>hellotong.ml/2018/hibernate02/</id>
+    <link href="hellotong.ml/2018/12/15/hibernate02/"/>
+    <id>hellotong.ml/2018/12/15/hibernate02/</id>
     <published>2018-11-22T11:27:11.009Z</published>
     <updated>2018-12-19T03:57:55.732Z</updated>
     
@@ -258,8 +258,8 @@
   
   <entry>
     <title>Hibernate (一)</title>
-    <link href="hellotong.ml/2018/hibernate01/"/>
-    <id>hellotong.ml/2018/hibernate01/</id>
+    <link href="hellotong.ml/2018/12/14/hibernate01/"/>
+    <id>hellotong.ml/2018/12/14/hibernate01/</id>
     <published>2018-11-21T13:42:23.612Z</published>
     <updated>2018-12-19T03:58:19.998Z</updated>
     
@@ -277,24 +277,6 @@
       <category term="Java" scheme="hellotong.ml/tags/Java/"/>
     
       <category term="Hibernate" scheme="hellotong.ml/tags/Hibernate/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>my first blog</title>
-    <link href="hellotong.ml/2018/my-first-blog/"/>
-    <id>hellotong.ml/2018/my-first-blog/</id>
-    <published>2018-11-19T04:17:55.000Z</published>
-    <updated>2018-11-22T11:25:52.027Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="This-is-my-first-blog"><a href="#This-is-my-first-blog" class="headerlink" title="This is my first blog."></a>This is my first blog.</h1><p>Hello, everyone!</p><blockquote><p>This is my first blog!</p></blockquote><p><code>java</code></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Hibernate 的其他 API</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Tong</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HibernateDemo5</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="comment">// Query</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">Session session = HibernateUtils.getCurrentSession();</span><br><span class="line">Transaction tx = session.beginTransaction();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 简单查询/查询所有</span></span><br><span class="line"><span class="comment">// 通过 Session 获得 Query 接口，HQL：hibernate query language</span></span><br><span class="line"><span class="comment">/* String hql = "from Customer";</span></span><br><span class="line"><span class="comment">Query query = session.createQuery(hql);*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 条件查询</span></span><br><span class="line"><span class="comment">/*String hql = "from Customer where cust_name like ?";</span></span><br><span class="line"><span class="comment">Query query = session.createQuery(hql);</span></span><br><span class="line"><span class="comment">// 设置条件</span></span><br><span class="line"><span class="comment">query.setParameter(0, "张%");// 在 hibernate 中 0 代表第一个问号*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 分页查询</span></span><br><span class="line">String hql = <span class="string">"from Customer"</span>;</span><br><span class="line">Query query = session.createQuery(hql);</span><br><span class="line"><span class="comment">// 设置分页</span></span><br><span class="line">query.setFirstResult(<span class="number">0</span>);<span class="comment">// 从第一条数据开始</span></span><br><span class="line">query.setMaxResults(<span class="number">3</span>);<span class="comment">// 每页显示 3 条数据</span></span><br><span class="line"></span><br><span class="line">List&lt;Customer&gt; list = query.list();</span><br><span class="line"><span class="keyword">for</span> (Customer customer : list) &#123;</span><br><span class="line">System.out.println(customer);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">tx.commit();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="comment">// Criteria</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">Session session = HibernateUtils.getCurrentSession();</span><br><span class="line">Transaction tx = session.beginTransaction();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过 Session 获得 Criteria 接口</span></span><br><span class="line">Criteria criteria = session.createCriteria(Customer.class);</span><br><span class="line"><span class="comment">// 简单查询/查询所有</span></span><br><span class="line"><span class="comment">// List&lt;Customer&gt; list = criteria.list();</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 条件查询</span></span><br><span class="line"><span class="comment">/*criteria.add(Restrictions.like("cust_name", "张", MatchMode.START));// 匹配名字开头是张的数据</span></span><br><span class="line"><span class="comment">List&lt;Customer&gt; list = criteria.list();*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 分页查询</span></span><br><span class="line">criteria.setFirstResult(<span class="number">3</span>);</span><br><span class="line">criteria.setMaxResults(<span class="number">3</span>);</span><br><span class="line">List&lt;Customer&gt; list = criteria.list();</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (Customer customer : list) &#123;</span><br><span class="line">System.out.println(customer);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">tx.commit();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="comment">// SQLQuery</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">Session session = HibernateUtils.getCurrentSession();</span><br><span class="line">Transaction tx = session.beginTransaction();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 简单查询/查询所有</span></span><br><span class="line"><span class="comment">/*String sql = "select * from cst_customer";</span></span><br><span class="line"><span class="comment">SQLQuery query = session.createSQLQuery(sql);*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 条件查询</span></span><br><span class="line"><span class="comment">/*String sql = "select * from cst_customer where cust_name=?";</span></span><br><span class="line"><span class="comment">SQLQuery query = session.createSQLQuery(sql);</span></span><br><span class="line"><span class="comment">// 设置条件</span></span><br><span class="line"><span class="comment">query.setParameter(0, "哈哈");*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 分页查询</span></span><br><span class="line">String sql = <span class="string">"select * from cst_customer limit ?, ?"</span>;</span><br><span class="line">SQLQuery query = session.createSQLQuery(sql);</span><br><span class="line"><span class="comment">// 设置分页</span></span><br><span class="line">query.setParameter(<span class="number">0</span>, <span class="number">3</span>);</span><br><span class="line">query.setParameter(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">List&lt;Object[]&gt; list = query.list();</span><br><span class="line"><span class="keyword">for</span> (Object[] objects : list) &#123;</span><br><span class="line">System.out.println(Arrays.toString(objects));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">tx.commit();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      This is my first blog！
-    
-    </summary>
-    
     
   </entry>
   
