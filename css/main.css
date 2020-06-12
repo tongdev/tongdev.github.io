@@ -2115,7 +2115,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #53ffaa;
+  background: #5cb63d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3225,10 +3225,10 @@ pre {
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 * {
-  cursor: url("http://pifu006nk.bkt.clouddn.com/Normal.cur"), auto !important;
+  cursor: url("https://i.loli.net/2020/06/12/NbVm1Od8QqAfzit.png"), auto !important;
 }
 a {
-  cursor: url("http://pifu006nk.bkt.clouddn.com/Link.cur"), auto !important;
+  cursor: url("https://i.loli.net/2020/06/12/OXmuD6zExasp9v1.png"), auto !important;
 }
 .menu {
   float: none;
