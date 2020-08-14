@@ -182,7 +182,7 @@
 <meta property="og:description" content="Git 和 GitHub 的使用以及 Git 在 IDEA 中的使用">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://lh3.googleusercontent.com/proxy/YtWk64jdYdrNb74BShID7xSYJQY1XtTgCOQA6OX5qXNUICNjahvMvJ3-Loa41pKY9zXqrWNDiUAAe5kORA">
-<meta property="og:updated_time" content="2020-08-14T12:53:01.214Z">
+<meta property="og:updated_time" content="2020-08-14T13:11:52.265Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git">
 <meta name="twitter:description" content="Git 和 GitHub 的使用以及 Git 在 IDEA 中的使用">
@@ -551,7 +551,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://lh3.googleusercontent.com/proxy/YtWk64jdYdrNb74BShID7xSYJQY1XtTgCOQA6OX5qXNUICNjahvMvJ3-Loa41pKY9zXqrWNDiUAAe5kORA" rel="gallery_ckdu8lu370004m8tk65cjs5s8" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://lh3.googleusercontent.com/proxy/YtWk64jdYdrNb74BShID7xSYJQY1XtTgCOQA6OX5qXNUICNjahvMvJ3-Loa41pKY9zXqrWNDiUAAe5kORA" rel="gallery_ckdu949ii0004xgtk6txnz20a" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://lh3.googleusercontent.com/proxy/YtWk64jdYdrNb74BShID7xSYJQY1XtTgCOQA6OX5qXNUICNjahvMvJ3-Loa41pKY9zXqrWNDiUAAe5kORA" itemprop="contentUrl">
               </a>
             
@@ -696,7 +696,7 @@
 </li>
 </ul>
 <h3 id="2-4-分支管理"><a href="#2-4-分支管理" class="headerlink" title="2.4 分支管理"></a>2.4 分支管理</h3><h4 id="2-4-1-什么是分支？"><a href="#2-4-1-什么是分支？" class="headerlink" title="2.4.1 什么是分支？"></a>2.4.1 什么是分支？</h4><p>在版本控制中，往往使用多条线同时推进多个任务。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_config.jpg" alt="git_branch.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_branch.png" alt="git_branch.png"></p>
 <h4 id="2-4-2-分支的好处"><a href="#2-4-2-分支的好处" class="headerlink" title="2.4.2 分支的好处"></a>2.4.2 分支的好处</h4><ul>
 <li>同时并行推进多个功能开发，提高开发效率</li>
 <li>各个分支在开发过程中，如果某一个分支开发失败，不会对其他分支有任何影响。失败的分支删除即可。</li>
@@ -795,31 +795,31 @@
 </li>
 </ul>
 <h2 id="4-IDEA-中使用-Git"><a href="#4-IDEA-中使用-Git" class="headerlink" title="4. IDEA 中使用 Git"></a>4. IDEA 中使用 Git</h2><h3 id="4-1-配置-Git"><a href="#4-1-配置-Git" class="headerlink" title="4.1 配置 Git"></a>4.1 配置 Git</h3><p>找到 File -&gt; Settings -&gt; Version Control -&gt; Git，指定 Git.exe 的路径，如果 Git 是在默认安装路径下的，一般都会自动识别，然后点击 Test 测试 Git 是否可以正常工作，出现版本号则说明正常。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_init.jpg" alt="git_config"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_config.jpg" alt="git_config"></p>
 <h3 id="4-2-创建工程初始化本地库"><a href="#4-2-创建工程初始化本地库" class="headerlink" title="4.2 创建工程初始化本地库"></a>4.2 创建工程初始化本地库</h3><p>创建一个工程，用 Git 进行管理</p>
 <p>创建好工程和内容之后，点击 VCS -&gt; Import into Version Control -&gt; Create Git Repository。打开当前工程文件夹，如果出现了一个 .git 文件夹就说明本地库初始化成功。（注意：.git 文件夹是隐藏的，需要在文件管理器中开启显示隐藏内容）</p>
 <p>同时工程中的文件就会褐色，表示这些内容还没有被 Git 跟踪。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_show_content.jpg" alt="git_init"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_exclude.jpg" alt="git_show_content"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_init.jpg" alt="git_init"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_show_content.jpg" alt="git_show_content"></p>
 <h3 id="4-3-忽略-IDEA-特定文件和文件夹"><a href="#4-3-忽略-IDEA-特定文件和文件夹" class="headerlink" title="4.3 忽略 IDEA 特定文件和文件夹"></a>4.3 忽略 IDEA 特定文件和文件夹</h3><p>我们只用 Git 管理工程的文件内容，对于 IDEA 生成的内容不做管理，所以需要 Git 忽略 IDEA 特定文件和文件夹。</p>
 <p>打开 当前工程文件夹/.git/info/exclude 文件，将需要忽略的IDEA 特定文件和文件夹列在里面。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_add.jpg" alt="git_exclude"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_exclude.jpg" alt="git_exclude"></p>
 <h3 id="4-3-添加到暂存区"><a href="#4-3-添加到暂存区" class="headerlink" title="4.3 添加到暂存区"></a>4.3 添加到暂存区</h3><p>工程文件夹上右键 -&gt; Git -&gt; Add 将工程目录下所有内容添加到暂存区，此时之前为褐色的就变成蓝色了，说明这些内容已经被 Git 追踪了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_commit.jpg" alt="git_add"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_add.jpg" alt="git_add"></p>
 <h3 id="4-4-提交到本地库"><a href="#4-4-提交到本地库" class="headerlink" title="4.4 提交到本地库"></a>4.4 提交到本地库</h3><p>可以右键提交，也可以点击工具栏上的图标进行提交，输入 commit message（随便输入），点击 commit</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_push.jpg" alt="git_commit"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_commit.jpg" alt="git_commit"></p>
 <p>此时关于 Git 的一些本地操作就基本完成了，如果需要将代码托管到 GitHub 远程仓库进行管理的话，需要先登录 GitHub 创建一个远程仓库，将远程仓库和当前工程进行关联。</p>
 <h3 id="4-5-配置远程仓库地址并将本地代码推送到远程仓库"><a href="#4-5-配置远程仓库地址并将本地代码推送到远程仓库" class="headerlink" title="4.5 配置远程仓库地址并将本地代码推送到远程仓库"></a>4.5 配置远程仓库地址并将本地代码推送到远程仓库</h3><p>首先先复制远程仓库的地址，如果没有配置 SSH 免密登录的话就先复制 HTTP 的地址</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_remote.jpg" alt="git_push"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_pull.jpg" alt="git_remote"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_remote.jpg" alt="git_remote"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_push.jpg" alt="git_push"></p>
 <p>点击 OK -&gt; 点击 Push 即可，稍等片刻，访问国外网站会比较慢。</p>
 <p>等到提示 Push 成功，现在到 GitHub 远程仓库刷新一下，本地工程代码就上传上去了。</p>
 <h3 id="4-6-拉取远程仓库"><a href="#4-6-拉取远程仓库" class="headerlink" title="4.6 拉取远程仓库"></a>4.6 拉取远程仓库</h3><p>如果本地工程内容不是最新版，则需要从远程仓库拉取最新内容</p>
-<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_clone.jpg" alt="git_pull"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_pull.jpg" alt="git_pull"></p>
 <p>点击 pull 即可，如果有冲突，则还要解决冲突。</p>
 <h3 id="4-7-克隆仓库"><a href="#4-7-克隆仓库" class="headerlink" title="4.7 克隆仓库"></a>4.7 克隆仓库</h3><p>有时我们需要把远程仓库克隆到本地查看，首先需要复制远程仓库的地址，然后进行如下操作</p>
+<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_clone.jpg" alt="git_clone"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_cloneform.jpg" alt="git_clone"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/tongdev/PicBed/img/git_branch.png" alt="git_cloneform"></p>
 <p>点击 clone 即可。</p>
 <p>以上就是在 IDEA 中使用 Git 的基本操作了，当然还有没有涉及到的内容，还需要大家慢慢探索。</p>
 
@@ -851,7 +851,7 @@
   <p><span>本文标题:</span><a href="/2020/Git/">Git</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Tong 的个人博客">Tong</a></p>
   <p><span>发布时间:</span>2020年08月14日 - 20:42</p>
-  <p><span>最后更新:</span>2020年08月14日 - 20:53</p>
+  <p><span>最后更新:</span>2020年08月14日 - 21:11</p>
   <p><span>原始链接:</span><a href="/2020/Git/" title="Git">hellotong.ml/2020/Git/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="hellotong.ml/2020/Git/" aria-label="复制成功！"></i></span>
   </p>
